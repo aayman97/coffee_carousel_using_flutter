@@ -49,7 +49,8 @@ class _CoffeeCarouselPageState extends State<CoffeeCarouselPage> {
 
       
           AnimatedPositioned(
-            duration : Duration(milliseconds: 100),
+            duration : Duration(milliseconds: 10),
+            curve: Curves.easeIn,
           top : _page.round() < coffees.length? size.height*0.8 : size.height*0.6,
           left:_page.round() < coffees.length? size.width*0.35 : size.width*0.4,
           width: _page.round() < coffees.length? size.width*0.3 : size.width*0.2,

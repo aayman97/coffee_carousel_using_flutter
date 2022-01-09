@@ -1,5 +1,6 @@
 import 'package:coffee_carousel_using_flutter/coffeeCarouselPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,14 +32,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(   
-        body: CoffeeCarouselPage()
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+  
+    ]);
+    return Scaffold(body: CoffeeCarouselPage()
         // This trailing comma makes auto-formatting nicer for build methods.
-      );
-    
+        );
   }
 }
